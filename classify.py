@@ -4,12 +4,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import Perceptron
 from sklearn.neural_network import MLPClassifier
 
-classifiers = []
-
-with open('classifiers.pickle', 'rb') as f:
-    classifiers = pickle.load(f)
-
 def classify(data):
+    mlpc = pickle.load(open("./classifiers/mlpc.pickle", 'rb'))
     predict = [[]]
     for key in data:
         if key == 'age':
@@ -24,8 +20,7 @@ def classify(data):
                 predict[0].append(1)
             else:
                 predict[0].append(0)
-
-    mlpc = classifiers[0]
+                
     result = mlpc.predict(predict)
     if result == [0]:
         return False

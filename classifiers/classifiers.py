@@ -114,8 +114,8 @@ print(f"Confusion matrix =\n{confusion_matrix(y_test, y_pred)}")
 # Classification report
 print(f"final report =\n{classification_report(y_pred, y_test)}")
 
-# classifiers = [mlpc, dtc, ptc]
+classifiers = [mlpc, dtc, ptc]
 
-# with open('data.pickle', 'wb') as f:
-#     # Pickle the 'data' dictionary using the highest protocol available.
-#     pickle.dump(classifiers, f, pickle.HIGHEST_PROTOCOL)
+pickle.dump(dtc, open("dtc.pickle", 'wb'))
+pickle.dump(ptc, open("ptc.pickle", 'wb'))
+pickle.dump(mlpc, open("mlpc.pickle", 'wb'))
