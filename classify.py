@@ -6,7 +6,7 @@ from sklearn.neural_network import MLPClassifier
 
 classifiers = []
 
-with open('./classifiers/classifiers.pickle', 'rb') as f:
+with open('classifiers.pickle', 'rb') as f:
     classifiers = pickle.load(f)
 
 def classify(data):

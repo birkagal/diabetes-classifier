@@ -1,4 +1,4 @@
-from classifiers.classify import *
+import classify
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
