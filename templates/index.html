@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </head>
+
+  <body>
+    <h1>Early Stage Diabetes Prediction</h1>
+
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+
+    <form action="javascript:click_submit()">
+      <div class="input-headings">
+        <label for="age" id="age-label"><b>1. Age</b></label>
+        <input id="age" type="number" name="age" class="form-inputs" required />
+        <br />
+        <br />
+        <label for="gender" id="gender"> <b>2. What is your Gender?</b> </label>
+        <br />
+        <input id="gender" type="radio" name="gender" value="male" required />
+        <label for="gender"> Male </label>
+        <br />
+        <input id="gender" type="radio" name="gender" value="female" />
+        <label for="gender"> Female </label>
+        <br />
+        <br />
+        <label for="polyuria" id="polyuria">
+          <b>3. Do you suffer from Polyuria?</b>
+        </label>
+        <br />
+
+        <input
+          id="polyuria"
+          type="radio"
+          name="polyuria"
+          value="yes"
+          required
+        />
+        <label for="polyuria"> Yes </label>
+        <br />
+
+        <input id="polyuria" type="radio" name="polyuria" value="no" />
+        <label for="polyuria"> No </label>
+        <br />
+        <br />
+        <label for="polydipsia" id="polydipsia">
+          <b>4. Do you suffer from Polydipsia?</b>
+        </label>
+        <br />
+
+        <input
+          id="polydipsia"
+          type="radio"
+          name="polydipsia"
+          value="yes"
+          required
+        />
+        <label for="polydipsia"> Yes </label>
+        <br />
+
+        <input id="polydipsia" type="radio" name="polydipsia" value="no" />
+        <label for="polydipsia"> No </label>
+        <br />
+        <br />
+        <label for="swl" id="swl">
+          <b>5. Do you suffer from Sudden Weight Loss?</b>
+        </label>
+        <br />
+
+        <input id="swl" type="radio" name="swl" value="yes" required />
+        <label for="swl"> Yes </label>
+        <br />
+
+        <input id="swl" type="radio" name="swl" value="no" />
+        <label for="swl"> No </label>
+        <br />
+        <br />
+        <label for="weakness" id="weakness">
+          <b>6. Do you suffer from Weakness?</b>
+        </label>
+        <br />
+
+        <input
+          id="weakness"
+          type="radio"
+          name="weakness"
+          value="yes"
+          required
+        />
+        <label for="weakness"> Yes </label>
+        <br />
+
+        <input id="weakness" type="radio" name="weakness" value="no" />
+        <label for="weakness"> No </label>
+        <br />
+        <br />
+        <label for="polyphagia" id="polyphagia">
+          <b>7. Do you suffer from Polyphagia?</b>
+        </label>
+        <br />
+
+        <input
+          id="polyphagia"
+          type="radio"
+          name="polyphagia"
+          value="yes"
+          required
+        />
+        <label for="polyphagia"> Yes </label>
+        <br />
+
+        <input id="polyphagia" type="radio" name="polyphagia" value="no" />
+        <label for="polyphagia"> No </label>
+        <br />
+        <br />
+        <label for="gt" id="gt">
+          <b>8. Do you suffer from Genital Thrush?</b>
+        </label>
+        <br />
+
+        <input id="gt" type="radio" name="gt" value="yes" required />
+        <label for="gt"> Yes </label>
+        <br />
+
+        <input id="gt" type="radio" name="gt" value="no" />
+        <label for="gt"> No </label>
+        <br />
+        <br />
+        <label for="vb" id="vb">
+          <b>9. Do you suffer from Visual Blurring?</b>
+        </label>
+        <br />
+
+        <input id="vb" type="radio" name="vb" value="yes" required />
+        <label for="vb"> Yes </label>
+        <br />
+
+        <input id="vb" type="radio" name="vb" value="no" />
+        <label for="vb"> No </label>
+        <br />
+        <br />
+        <label for="itching" id="itching">
+          <b>10. Do you suffer from Itching?</b>
+        </label>
+        <br />
+
+        <input id="itching" type="radio" name="itching" value="yes" required />
+        <label for="itching"> Yes </label>
+        <br />
+
+        <input id="itching" type="radio" name="itching" value="no" />
+        <label for="itching"> No </label>
+        <br />
+        <br />
+        <label for="irritability" id="irritability">
+          <b>11. Do you suffer from Irritability?</b>
+        </label>
+        <br />
+
+        <input
+          id="irritability"
+          type="radio"
+          name="irritability"
+          value="yes"
+          required
+        />
+        <label for="irritability"> Yes </label>
+        <br />
+
+        <input id="irritability" type="radio" name="irritability" value="no" />
+        <label for="irritability"> No </label>
+        <br />
+        <br />
+        <label for="dh" id="dh">
+          <b>12. Do you suffer from Delayed Healing?</b>
+        </label>
+        <br />
+
+        <input id="dh" type="radio" name="dh" value="yes" required />
+        <label for="dh"> Yes </label>
+        <br />
+
+        <input id="dh" type="radio" name="dh" value="no" />
+        <label for="dh"> No </label>
+        <br />
+        <br />
+        <label for="pp" id="pp">
+          <b>13. Do you suffer from Partial Paresis?</b>
+        </label>
+        <br />
+
+        <input id="pp" type="radio" name="pp" value="yes" required />
+        <label for="pp"> Yes </label>
+        <br />
+
+        <input id="pp" type="radio" name="pp" value="no" />
+        <label for="pp"> No </label>
+        <br />
+        <br />
+        <label for="ms" id="ms">
+          <b>14. Do you suffer from Muscle Stiffness?</b>
+        </label>
+        <br />
+
+        <input id="ms" type="radio" name="ms" value="yes" required />
+        <label for="ms"> Yes </label>
+        <br />
+
+        <input id="ms" type="radio" name="ms" value="no" />
+        <label for="ms"> No </label>
+        <br />
+        <br />
+        <label for="alopecia" id="alopecia">
+          <b>15. Do you suffer from Alopecia?</b>
+        </label>
+        <br />
+
+        <input
+          id="alopecia"
+          type="radio"
+          name="alopecia"
+          value="yes"
+          required
+        />
+        <label for="alopecia"> Yes </label>
+        <br />
+
+        <input id="alopecia" type="radio" name="alopecia" value="no" />
+        <label for="alopecia"> No </label>
+        <br />
+        <br />
+        <label for="obesity" id="obesity">
+          <b>16. Do you suffer from Obesity?</b>
+        </label>
+        <br />
+
+        <input id="obesity" type="radio" name="obesity" value="yes" required />
+        <label for="obesity"> Yes </label>
+        <br />
+
+        <input id="obesity" type="radio" name="obesity" value="no" />
+        <label for="obesityobesity"> No </label>
+        <br />
+        <br />
+        <input
+          id="submit"
+          type="submit"
+          value="Classify"
+          class="submit-button"
+        />
+        <br />
+        <br />
+        <div id="results" class="results"><b>Result: Positive</b></div>
+      </div>
+    </form>
+  </body>
+</html>
