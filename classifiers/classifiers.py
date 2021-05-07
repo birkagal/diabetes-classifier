@@ -116,6 +116,5 @@ print(f"final report =\n{classification_report(y_pred, y_test)}")
 
 classifiers = [mlpc, dtc, ptc]
 
-pickle.dump(dtc, open("dtc.pickle", 'wb'))
-pickle.dump(ptc, open("ptc.pickle", 'wb'))
+# MLP Classifier has the best result, pickle it to be used in https://diabetesclassifier.herokuapp.com/
 pickle.dump(mlpc, open("mlpc.pickle", 'wb'))
