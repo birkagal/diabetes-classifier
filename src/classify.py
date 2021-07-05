@@ -4,7 +4,6 @@ import json
 # Load model from picke file
 mlpc = pickle.load(open("./src/classifiers/mlpc.pickle", "rb"))
 ptc = pickle.load(open("./src/classifiers/ptc.pickle", "rb"))
-dtc = pickle.load(open("./src/classifiers/dtc.pickle", "rb"))
 
 
 def classify(data):
@@ -26,7 +25,6 @@ def classify(data):
 
     # Apply the model to the predict data
     result = []
-    result.append(list(dtc.predict(predict)))
     result.append(list(ptc.predict(predict)))
     result.append(list(mlpc.predict(predict)))
     if [0] in result:
