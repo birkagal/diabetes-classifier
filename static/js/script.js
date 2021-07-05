@@ -12,7 +12,7 @@ const click_submit = () => {
       var element = document.getElementById("results");
       element.style.display = "inline";
       if (data === "Positive") {
-        element.style.color = "##ce1205";
+        element.style.color = "#ce1205";
         element.innerHTML = "Result: Positive";
       } else if (data === "Negative") {
         element.style.color = "#0051ff";

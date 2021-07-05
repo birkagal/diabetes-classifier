@@ -16,6 +16,14 @@ form {
   margin: auto;
 }
 
+footer {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}
+
 a:link {
   color: black;
   text-decoration: underline;
