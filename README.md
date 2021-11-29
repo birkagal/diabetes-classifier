@@ -6,6 +6,8 @@
 Using the power of three different machine learning classifiers, this website can help predict early stage diabetes.\
 This project was designed and built during Software Engineering Semiar course, and was my first project in the realm of Machine Learning.
 
+You can find the full seminar report (in Hebrew) at this  [`link`](https://drive.google.com/file/d/1WowPZkZfueunARCpy79JBXzuzU8cpo8v/view).
+
 The models used in this projects are: [`Perceptron`](https://en.wikipedia.org/wiki/Perceptron), [`Multilayer Perceptron`](https://en.wikipedia.org/wiki/Multilayer_perceptron) and [`Decision Tree`](https://en.wikipedia.org/wiki/Decision_tree).\
 The database used to train the models was taken from [`Kaggle`](https://www.kaggle.com/) and can be found [here](https://www.kaggle.com/ishandutta/early-stage-diabetes-risk-prediction-dataset).
 
