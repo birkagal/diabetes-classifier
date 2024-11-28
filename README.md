@@ -1,7 +1,7 @@
 # 🩺 Early Stage Diabetes Prediction
 
 > Powered by Machine Learning algorithms, simple web-app to help find early stage diabetes prediction.\
-> Check out the app @ https://diabetesclassifier.herokuapp.com
+> Check out the app @ https://diabetes-classifier-qech.onrender.com
 
 Using the power of three different machine learning classifiers, this website can help predict early stage diabetes.\
 This project was designed and built during Software Engineering Semiar course, and was my first project in the realm of Machine Learning.
