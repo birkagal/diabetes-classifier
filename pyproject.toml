@@ -6,7 +6,7 @@ authors = ["Gal Birka <birkagal@rapid7.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 flask = "^3.1.0"
 pandas = "^2.2.3"
 scikit_learn = "^1.5.2"
