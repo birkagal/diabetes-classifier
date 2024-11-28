@@ -1,13 +1,19 @@
 import pickle
-import json
+
+import sklearn.linear_model
+import sklearn.neural_network
+import sklearn.tree
+
 
 # Load model from picke file
-mlpc = pickle.load(open("./src/classifiers/mlpc.pickle", "rb"))
-ptc = pickle.load(open("./src/classifiers/ptc.pickle", "rb"))
+mlpc: sklearn.neural_network.MLPClassifier = pickle.load(open("./src/classifiers/mlpc.pickle", "rb"))
+ptc: sklearn.linear_model.Perceptron = pickle.load(open("./src/classifiers/ptc.pickle", "rb"))
+dtc: sklearn.tree.DecisionTreeClassifier = pickle.load(open("./src/classifiers/dtc.pickle", "rb"))
 
 
 def classify(data):
     predict = [[]]
+
     # Set predict list using given data
     for key in data:
         if key == "age":
@@ -24,9 +30,11 @@ def classify(data):
                 predict[0].append(0)
 
     # Apply the model to the predict data
-    result = []
-    result.append(list(ptc.predict(predict)))
-    result.append(list(mlpc.predict(predict)))
+    result = [
+        list(ptc.predict(predict)),
+        list(mlpc.predict(predict)),
+        list(dtc.predict(predict)),
+    ]
     if [0] in result:
         return False
     else:

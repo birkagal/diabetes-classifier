@@ -10,7 +10,7 @@ from sklearn.metrics import (
 import pickle
 
 ## Importing the dataset
-dataset = read_csv("./data.csv")
+dataset = read_csv("./src/classifiers/data.csv")
 
 ## Data Preprocessin
 # Normalizing the Age
@@ -46,9 +46,7 @@ for i in range(9):
     dtc = DecisionTreeClassifier(max_depth=i + 1, criterion="gini", random_state=0)
     dtc.fit(X_train, y_train)
     y_pred = dtc.predict(X_test)
-    print(
-        f"depth={i+1} \t train acc={dtc.score(X_train, y_train):.10f} \t test acc={dtc.score(X_test, y_test)}"
-    )
+    print(f"depth={i+1} \t train acc={dtc.score(X_train, y_train):.10f} \t test acc={dtc.score(X_test, y_test)}")
 
 ## DECISION TREE CLASSIFIER
 dtc = DecisionTreeClassifier(max_depth=7, criterion="gini", random_state=0)

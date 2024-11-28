@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "diabetes-classifier"
+version = "0.1.0"
+description = "Powered by Machine Learning algorithms, web-app to help find early stage diabetes prediction"
+authors = ["Gal Birka <birkagal@rapid7.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+pandas = "^2.2.3"
+scikit_learn = "^1.5.2"
+gunicorn = "^23.0.0"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

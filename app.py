@@ -1,17 +1,19 @@
-import src.classify
-from flask import Flask, render_template, request
+import flask
 
-app = Flask(__name__)
+import src.classify
+
+
+app = flask.Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return flask.render_template("index.html")
 
 
 @app.route("/result", methods=["POST"])
 def result():
-    result = src.classify.classify(request.json)
+    result = src.classify.classify(flask.request.json)
     if result:
         return "Positive"
     else:
